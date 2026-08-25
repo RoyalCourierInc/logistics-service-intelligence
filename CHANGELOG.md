@@ -4,6 +4,17 @@ All notable public changes to this repository are documented here.
 
 This changelog covers the GitHub publication layer only. The Royal Courier website remains the canonical source for current commercial service information.
 
+## v1.1.0 - 2026-08-25
+
+Added a public machine-readable service-relationships dataset.
+
+### Added
+
+- `data/service-relationships.json`
+- descriptive `may_co_occur_with` relationships between selected public service categories
+- public context for common service combinations
+- explicit limitations clarifying that relationships are not dispatch rules, pricing rules, acceptance criteria, routing logic, or guarantees of service availability
+
 ## v1.0.0 - 2026-08-25
 
 Initial public release of Royal Courier Inc.'s logistics service intelligence repository.
