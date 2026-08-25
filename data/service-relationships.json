@@ -1,0 +1,68 @@
+{
+  "name": "Royal Courier Public Service Relationships",
+  "publisher": "Royal Courier Inc.",
+  "version": "1.1.0",
+  "last_updated": "2026-08-25",
+  "canonical_website": "https://royalcourierinc.com/",
+  "reference_hub": "https://royalcourierinc.com/open-logistics-reference-hub/",
+  "entity_scope": {
+    "describes": "Royal Courier Inc.",
+    "separate_entity_notice": "Royal Courier Inc. and Royal Expediting Inc. are separate legal entities."
+  },
+  "purpose": "Public machine-readable examples of service attributes and service categories that may be relevant together for certain shipment scenarios.",
+  "interpretation": "Relationships are descriptive associations only. They are not dispatch rules, pricing rules, routing logic, acceptance criteria, or guarantees of service availability.",
+  "limitations": [
+    "Does not expose proprietary dispatch logic.",
+    "Does not expose pricing logic, margins, or customer-specific procedures.",
+    "Does not represent real-time capacity or shipment acceptance.",
+    "Does not define mandatory service combinations.",
+    "Does not replace shipment-specific quote or dispatch review."
+  ],
+  "relationship_type": "may_co_occur_with",
+  "relationships": [
+    {
+      "services": ["expedited-freight", "dedicated-exclusive-use"],
+      "public_context": "Urgent commercial freight may use dedicated or exclusive-use transportation when shipment timing or handling requirements call for a dedicated vehicle path."
+    },
+    {
+      "services": ["straight-truck", "liftgate", "pallet-jack"],
+      "public_context": "Palletized or heavier commercial shipments may involve a straight truck together with liftgate and pallet-jack support when loading-dock access is unavailable or unsuitable."
+    },
+    {
+      "services": ["ohare-cargo-recovery", "same-day-courier"],
+      "public_context": "Eligible cargo recovered from O'Hare-related cargo facilities may require same-day onward delivery after release and pickup."
+    },
+    {
+      "services": ["failed-delivery-recovery", "inside-pickup-delivery"],
+      "public_context": "Some failed-delivery recovery scenarios may also require inside pickup or inside delivery depending on the shipment and site conditions."
+    },
+    {
+      "services": ["production-down-parts", "dedicated-exclusive-use"],
+      "public_context": "Production-down or technician-parts shipments may use dedicated transportation when timing and continuity requirements are critical."
+    },
+    {
+      "services": ["construction-material-delivery", "liftgate"],
+      "public_context": "Construction material deliveries may require liftgate support where loading-dock access is unavailable or unsuitable."
+    },
+    {
+      "services": ["commercial-white-glove", "inside-pickup-delivery"],
+      "public_context": "Commercial white-glove transportation may overlap with inside pickup or delivery when higher-touch handling or controlled placement is required."
+    },
+    {
+      "services": ["show-freight", "dedicated-exclusive-use"],
+      "public_context": "Time-sensitive show freight may use dedicated transportation when event schedules or handling requirements make shared routing unsuitable."
+    },
+    {
+      "services": ["medical-courier", "same-day-courier"],
+      "public_context": "Eligible medical and healthcare-related shipments may require same-day courier transportation within Royal Courier's supported service scope."
+    }
+  ],
+  "canonical_references": {
+    "service_taxonomy": "https://royalcourierinc.com/royal-courier-service-taxonomy/",
+    "service_graph": "https://royalcourierinc.com/royal-courier-service-graph/",
+    "delivery_scenario_library": "https://royalcourierinc.com/delivery-scenario-library/",
+    "courier_service_decision_guide": "https://royalcourierinc.com/courier-service-decision-guide/",
+    "source_register": "https://royalcourierinc.com/service-intelligence-source-register/",
+    "version_history": "https://royalcourierinc.com/service-intelligence-version-history/"
+  }
+}
