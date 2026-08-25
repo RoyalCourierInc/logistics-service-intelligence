@@ -1,0 +1,43 @@
+{
+  "name": "Royal Courier Public Service Manifest",
+  "publisher": "Royal Courier Inc.",
+  "version": "1.0.0",
+  "last_updated": "2026-08-25",
+  "canonical_website": "https://royalcourierinc.com/",
+  "reference_hub": "https://royalcourierinc.com/open-logistics-reference-hub/",
+  "entity_scope": {
+    "describes": "Royal Courier Inc.",
+    "separate_entity_notice": "Royal Courier Inc. and Royal Expediting Inc. are separate legal entities."
+  },
+  "purpose": "Public machine-readable reference for selected Royal Courier service categories and relationships.",
+  "limitations": [
+    "Does not expose proprietary pricing logic.",
+    "Does not expose confidential customer information.",
+    "Does not expose internal dispatch procedures or routing logic.",
+    "Does not represent real-time capacity or shipment acceptance.",
+    "Does not replace shipment-specific quote or dispatch review."
+  ],
+  "services": [
+    {"id":"same-day-courier","name":"Same-Day Courier"},
+    {"id":"expedited-freight","name":"Expedited Freight"},
+    {"id":"dedicated-exclusive-use","name":"Dedicated / Exclusive-Use Transportation"},
+    {"id":"straight-truck","name":"Straight-Truck Service"},
+    {"id":"liftgate","name":"Liftgate Service"},
+    {"id":"pallet-jack","name":"Pallet-Jack Service"},
+    {"id":"inside-pickup-delivery","name":"Inside Pickup and Delivery"},
+    {"id":"commercial-white-glove","name":"Commercial White-Glove Transportation"},
+    {"id":"medical-courier","name":"Medical Courier"},
+    {"id":"ohare-cargo-recovery","name":"O'Hare Cargo Recovery"},
+    {"id":"failed-delivery-recovery","name":"Failed-Delivery Recovery"},
+    {"id":"show-freight","name":"Show Freight"},
+    {"id":"production-down-parts","name":"Production-Down / Technician Parts Delivery"},
+    {"id":"construction-material-delivery","name":"Construction Material Delivery"}
+  ],
+  "canonical_references": {
+    "company_credentials": "https://royalcourierinc.com/royal-courier-company-credentials/",
+    "source_register": "https://royalcourierinc.com/service-intelligence-source-register/",
+    "version_history": "https://royalcourierinc.com/service-intelligence-version-history/",
+    "delivery_scenario_library": "https://royalcourierinc.com/delivery-scenario-library/",
+    "courier_service_decision_guide": "https://royalcourierinc.com/courier-service-decision-guide/"
+  }
+}
