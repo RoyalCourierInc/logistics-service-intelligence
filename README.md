@@ -18,6 +18,7 @@ This repository contains public representations of selected Royal Courier servic
 
 - service taxonomy
 - public service manifest data
+- public service relationships dataset
 - structured data examples
 - service relationships and terminology
 - methodology and provenance links
@@ -42,6 +43,14 @@ Materials in this repository may describe public service categories, terminology
 
 They do **not** publish confidential customer information, internal dispatch procedures, proprietary pricing logic, margins, private routing logic, real-time capacity, internal exception handling, or other non-public operating information.
 
+## Machine-Readable Files
+
+- `data/service-manifest.json` - selected public Royal Courier service categories
+- `data/service-relationships.json` - descriptive examples of public service categories that may be relevant together in certain shipment scenarios
+- `schema/service-example.jsonld` - Schema.org Service markup example
+
+The relationships dataset uses `may_co_occur_with` as a descriptive relationship. It does not encode mandatory combinations, dispatch decisions, pricing logic, service acceptance criteria, or routing rules.
+
 ## Core Public Resources
 
 - Open Logistics Reference Hub: https://royalcourierinc.com/open-logistics-reference-hub/
@@ -56,14 +65,15 @@ They do **not** publish confidential customer information, internal dispatch pro
 - Quote Classification Map: https://royalcourierinc.com/quote-classification-map/
 - Company Credentials: https://royalcourierinc.com/royal-courier-company-credentials/
 
-## Initial Repository Layout
+## Repository Layout
 
 ```text
 logistics-service-intelligence/
 ├── README.md
 ├── CHANGELOG.md
 ├── data/
-│   └── service-manifest.json
+│   ├── service-manifest.json
+│   └── service-relationships.json
 ├── docs/
 │   └── service-taxonomy.md
 └── schema/
@@ -74,7 +84,7 @@ logistics-service-intelligence/
 
 This repository uses semantic-style public release numbering for meaningful documentation and data changes.
 
-Current public repository release: `v1.0.0`
+Current repository documentation version: `v1.1.0`
 
 See `CHANGELOG.md` and the canonical Royal Courier version history for maintenance context.
 
