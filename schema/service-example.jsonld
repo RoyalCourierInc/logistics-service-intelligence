@@ -1,0 +1,22 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Same-Day Courier Service",
+  "serviceType": "Same-Day Courier",
+  "provider": {
+    "@type": "Organization",
+    "name": "Royal Courier Inc.",
+    "url": "https://royalcourierinc.com/"
+  },
+  "areaServed": {
+    "@type": "AdministrativeArea",
+    "name": "Chicago metropolitan area"
+  },
+  "url": "https://royalcourierinc.com/",
+  "description": "Public structured-data example showing how a Royal Courier Inc. service may be represented using Schema.org Service markup.",
+  "subjectOf": {
+    "@type": "WebPage",
+    "name": "Royal Courier Open Logistics Reference Hub",
+    "url": "https://royalcourierinc.com/open-logistics-reference-hub/"
+  }
+}
