@@ -130,7 +130,7 @@ logistics-service-intelligence/
 
 This repository uses semantic-style public release numbering for meaningful documentation and data changes.
 
-Current repository documentation version: `v1.1.0`
+Current repository documentation version: `v1.2.0`
 
 The website-hosted Semantic Retrieval Corpus is versioned independently from this repository release. Its current version is declared in the canonical corpus manifest.
 
