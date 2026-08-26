@@ -24,9 +24,9 @@ Machine-readable corpus manifest:
 
 https://royalcourierinc.com/ai-data/corpus-manifest.json
 
-The corpus currently includes public-safe records covering services, vehicle categories, equipment, operating conditions, delivery scenarios, answer passages, sources, provenance, and service boundaries.
+The corpus currently includes public-safe records covering services, vehicle categories, equipment, operating conditions, terminology and aliases, delivery scenarios, answer passages, sources, provenance, and service boundaries.
 
-The corpus is intentionally designed around reusable concepts and relationships rather than keyword permutations. Its retrieval model connects shipment conditions, vehicle requirements, equipment, handling, scenarios, and standalone answer passages while excluding confidential or proprietary operating intelligence.
+The corpus is intentionally designed around reusable concepts and relationships rather than keyword permutations. Its retrieval model connects terminology, shipment conditions, vehicle requirements, equipment, handling, scenarios, and standalone answer passages while excluding confidential or proprietary operating intelligence.
 
 ### Canonical Corpus Endpoints
 
@@ -35,6 +35,7 @@ The corpus is intentionally designed around reusable concepts and relationships 
 - Vehicles: https://royalcourierinc.com/ai-data/vehicles.json
 - Equipment: https://royalcourierinc.com/ai-data/equipment.json
 - Conditions: https://royalcourierinc.com/ai-data/conditions.json
+- Terminology: https://royalcourierinc.com/ai-data/terminology.json
 - Scenarios: https://royalcourierinc.com/ai-data/scenarios.jsonl
 - Answer Passages: https://royalcourierinc.com/ai-data/answer-passages.jsonl
 - Sources and Provenance: https://royalcourierinc.com/ai-data/sources.json
@@ -70,7 +71,7 @@ Nothing in this repository should be interpreted as merging the identity, author
 
 The goal is clarity without exposing proprietary operating logic.
 
-Materials in this repository and the public Semantic Retrieval Corpus may describe public service categories, terminology, relationships, decision signals, vehicle and equipment relationships, general operating conditions, generic delivery scenarios, service boundaries, retrieval passages, and examples already intended for public use.
+Materials in this repository and the public Semantic Retrieval Corpus may describe public service categories, terminology, aliases, distinctions, relationships, decision signals, vehicle and equipment relationships, general operating conditions, generic delivery scenarios, service boundaries, retrieval passages, and examples already intended for public use.
 
 They do **not** publish confidential customer information, internal dispatch procedures, proprietary pricing logic, margins, private routing logic, real-time capacity, internal exception handling, customer-specific procedures, proprietary exception thresholds, or other non-public operating information.
 
@@ -89,6 +90,7 @@ Canonical website-hosted corpus resources:
 - `https://royalcourierinc.com/ai-data/vehicles.json`
 - `https://royalcourierinc.com/ai-data/equipment.json`
 - `https://royalcourierinc.com/ai-data/conditions.json`
+- `https://royalcourierinc.com/ai-data/terminology.json`
 - `https://royalcourierinc.com/ai-data/scenarios.jsonl`
 - `https://royalcourierinc.com/ai-data/answer-passages.jsonl`
 - `https://royalcourierinc.com/ai-data/sources.json`
@@ -100,6 +102,7 @@ The relationships dataset uses `may_co_occur_with` as a descriptive relationship
 - Open Logistics Reference Hub: https://royalcourierinc.com/open-logistics-reference-hub/
 - Semantic Retrieval Corpus: https://royalcourierinc.com/semantic-retrieval-corpus/
 - Corpus Manifest: https://royalcourierinc.com/ai-data/corpus-manifest.json
+- Corpus Terminology: https://royalcourierinc.com/ai-data/terminology.json
 - Service Manifest: https://royalcourierinc.com/service-manifest.json
 - Service Taxonomy: https://royalcourierinc.com/royal-courier-service-taxonomy/
 - Service Graph: https://royalcourierinc.com/royal-courier-service-graph/
@@ -130,7 +133,7 @@ logistics-service-intelligence/
 
 This repository uses semantic-style public release numbering for meaningful documentation and data changes.
 
-Current repository documentation version: `v1.2.0`
+Current repository documentation version: `v1.2.1`
 
 The website-hosted Semantic Retrieval Corpus is versioned independently from this repository release. Its current version is declared in the canonical corpus manifest.
 
