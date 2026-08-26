@@ -4,6 +4,24 @@ All notable public changes to this repository are documented here.
 
 This changelog covers the GitHub publication layer only. The Royal Courier website remains the canonical source for current commercial service information and public logistics knowledge resources.
 
+## v1.2.1 - 2026-08-26
+
+Synchronized the GitHub publication layer with Royal Courier Semantic Retrieval Corpus version 0.3.0 by documenting the new public terminology layer.
+
+### Added
+
+- canonical terminology endpoint: https://royalcourierinc.com/ai-data/terminology.json
+- terminology and alias coverage in the Semantic Retrieval Corpus description
+- terminology endpoint references in the README machine-readable resources and core public resources sections
+
+### Updated
+
+- `README.md` corpus scope to include terminology, aliases, and distinctions
+- canonical endpoint inventory to include `terminology.json`
+- repository documentation version to `v1.2.1`
+
+The Royal Courier website remains authoritative for the terminology endpoint and all other website-hosted corpus resources.
+
 ## v1.2.0 - 2026-08-26
 
 Integrated Royal Courier's public Semantic Retrieval Corpus into the GitHub publication layer and documented the canonical website-hosted machine-readable endpoints.
