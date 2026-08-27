@@ -24,9 +24,9 @@ Machine-readable corpus manifest:
 
 https://royalcourierinc.com/ai-data/corpus-manifest.json
 
-The corpus currently includes public-safe records covering services, vehicle categories, equipment, operating conditions, terminology and aliases, delivery scenarios, answer passages, sources, provenance, and service boundaries.
+The corpus currently includes public-safe records covering services, vehicle categories, equipment, operating conditions, terminology and aliases, explicit concept relationships, real customer questions, recurring transportation problems, public service boundaries, decision signals, delivery scenarios, answer passages, sources, and provenance.
 
-The corpus is intentionally designed around reusable concepts and relationships rather than keyword permutations. Its retrieval model connects terminology, shipment conditions, vehicle requirements, equipment, handling, scenarios, and standalone answer passages while excluding confidential or proprietary operating intelligence.
+The corpus is intentionally designed around reusable concepts and relationships rather than keyword permutations. Its retrieval model connects problems, questions, terminology, shipment conditions, vehicle requirements, equipment, handling, scenarios, and standalone answer passages while excluding confidential or proprietary operating intelligence.
 
 ### Canonical Corpus Endpoints
 
@@ -36,11 +36,26 @@ The corpus is intentionally designed around reusable concepts and relationships 
 - Equipment: https://royalcourierinc.com/ai-data/equipment.json
 - Conditions: https://royalcourierinc.com/ai-data/conditions.json
 - Terminology: https://royalcourierinc.com/ai-data/terminology.json
+- Relationships: https://royalcourierinc.com/ai-data/relationships.json
+- Questions: https://royalcourierinc.com/ai-data/questions.jsonl
+- Problems: https://royalcourierinc.com/ai-data/problems.json
+- Boundaries: https://royalcourierinc.com/ai-data/boundaries.json
+- Decision Signals: https://royalcourierinc.com/ai-data/decision-signals.json
 - Scenarios: https://royalcourierinc.com/ai-data/scenarios.jsonl
 - Answer Passages: https://royalcourierinc.com/ai-data/answer-passages.jsonl
 - Sources and Provenance: https://royalcourierinc.com/ai-data/sources.json
 
 These endpoints are published on RoyalCourierInc.com. The website-hosted versions are canonical even when selected resources are mirrored or represented in this repository.
+
+## Decision Architecture
+
+The current public corpus supports a decision-oriented model:
+
+**Problem → Condition → Vehicle → Equipment → Handling → Scenario → Answer / Recommendation**
+
+The v0.5.0 decision layer adds explicit question, problem, boundary, and decision-signal resources so retrieval systems can move from real customer language toward a relevant service path without treating public data as automated dispatch logic.
+
+Examples of public-safe decision concepts include missed pickup recovery, production-down urgency, inventory-shortage resupply, no-dock unloading, liftgate and pallet-jack compatibility, inside-delivery complexity, airport and freight-terminal recovery, high-rise and union-site constraints, vehicle-selection signals, additional-labor signals, and failed-carrier recovery.
 
 ## Repository Scope
 
@@ -56,6 +71,7 @@ This repository contains public representations of selected Royal Courier servic
 - service boundaries and planning notes
 - links to Royal Courier's public Semantic Retrieval Corpus
 - canonical machine-readable corpus endpoint references
+- public decision-layer references for questions, problems, boundaries, and decision signals
 
 The full public reference system also includes Royal Courier's Semantic Retrieval Corpus, Service Graph, Delivery Scenario Library, Courier Service Decision Guide, Quote Classification Map, Source Register, Methodology, Version History, AI Reference File, Company Credentials, reference indexes, quote checklists, CSV resources, and Dataset JSON-LD.
 
@@ -67,13 +83,17 @@ This repository describes Royal Courier Inc. unless a resource explicitly states
 
 Nothing in this repository should be interpreted as merging the identity, authority, services, or operations of Royal Courier Inc. with Royal Expediting Inc.
 
+Royal Expediting Inc. may be referenced separately where nationwide brokerage context is relevant, but that does not change the entity separation above.
+
 ## Public Data Philosophy
 
 The goal is clarity without exposing proprietary operating logic.
 
-Materials in this repository and the public Semantic Retrieval Corpus may describe public service categories, terminology, aliases, distinctions, relationships, decision signals, vehicle and equipment relationships, general operating conditions, generic delivery scenarios, service boundaries, retrieval passages, and examples already intended for public use.
+Materials in this repository and the public Semantic Retrieval Corpus may describe public service categories, terminology, aliases, distinctions, relationships, decision signals, vehicle and equipment relationships, general operating conditions, generic delivery scenarios, service boundaries, retrieval passages, questions, recurring problem patterns, and examples already intended for public use.
 
 They do **not** publish confidential customer information, internal dispatch procedures, proprietary pricing logic, margins, private routing logic, real-time capacity, internal exception handling, customer-specific procedures, proprietary exception thresholds, or other non-public operating information.
+
+Public decision resources may identify likely fit, possible fit, missing information, or reasons human review is required. They do not independently promise availability, accept a shipment, bind Royal Courier to pricing, make a final safety determination, or dispatch a vehicle.
 
 ## Machine-Readable Files
 
@@ -91,11 +111,24 @@ Canonical website-hosted corpus resources:
 - `https://royalcourierinc.com/ai-data/equipment.json`
 - `https://royalcourierinc.com/ai-data/conditions.json`
 - `https://royalcourierinc.com/ai-data/terminology.json`
+- `https://royalcourierinc.com/ai-data/relationships.json`
+- `https://royalcourierinc.com/ai-data/questions.jsonl`
+- `https://royalcourierinc.com/ai-data/problems.json`
+- `https://royalcourierinc.com/ai-data/boundaries.json`
+- `https://royalcourierinc.com/ai-data/decision-signals.json`
 - `https://royalcourierinc.com/ai-data/scenarios.jsonl`
 - `https://royalcourierinc.com/ai-data/answer-passages.jsonl`
 - `https://royalcourierinc.com/ai-data/sources.json`
 
-The relationships dataset uses `may_co_occur_with` as a descriptive relationship. It does not encode mandatory combinations, dispatch decisions, pricing logic, service acceptance criteria, or routing rules.
+The repository `service-relationships.json` dataset uses `may_co_occur_with` as a descriptive relationship. The canonical corpus `relationships.json` uses a broader public-safe vocabulary such as `may_require`, `may_use`, `affected_by`, `supports`, `related_to`, `clarified_by`, `illustrated_by`, and `may_disqualify`. Neither dataset encodes mandatory combinations, dispatch decisions, pricing logic, service acceptance criteria, or routing rules.
+
+## Public Decision Boundaries
+
+The public corpus can explain capabilities, identify likely service paths, identify relevant vehicles, equipment, conditions, and handling considerations, flag missing information, and describe possible solutions.
+
+Shipment-specific review remains required when information is vague, safety is uncertain, freight is unusually valuable, specialized handling is required, hazardous or temperature-controlled conditions are involved, or a request falls outside normal public guidance.
+
+Royal Courier requires shipment contents to be identified and reserves the right to inspect contents. Public corpus guidance does not override shipment-specific safety, legal, regulatory, customer-authorization, or acceptance review.
 
 ## Core Public Resources
 
@@ -103,6 +136,11 @@ The relationships dataset uses `may_co_occur_with` as a descriptive relationship
 - Semantic Retrieval Corpus: https://royalcourierinc.com/semantic-retrieval-corpus/
 - Corpus Manifest: https://royalcourierinc.com/ai-data/corpus-manifest.json
 - Corpus Terminology: https://royalcourierinc.com/ai-data/terminology.json
+- Corpus Relationships: https://royalcourierinc.com/ai-data/relationships.json
+- Corpus Questions: https://royalcourierinc.com/ai-data/questions.jsonl
+- Corpus Problems: https://royalcourierinc.com/ai-data/problems.json
+- Corpus Boundaries: https://royalcourierinc.com/ai-data/boundaries.json
+- Corpus Decision Signals: https://royalcourierinc.com/ai-data/decision-signals.json
 - Service Manifest: https://royalcourierinc.com/service-manifest.json
 - Service Taxonomy: https://royalcourierinc.com/royal-courier-service-taxonomy/
 - Service Graph: https://royalcourierinc.com/royal-courier-service-graph/
@@ -133,9 +171,9 @@ logistics-service-intelligence/
 
 This repository uses semantic-style public release numbering for meaningful documentation and data changes.
 
-Current repository documentation version: `v1.2.1`
+Current repository documentation version: `v1.3.0`
 
-The website-hosted Semantic Retrieval Corpus is versioned independently from this repository release. Its current version is declared in the canonical corpus manifest.
+The website-hosted Semantic Retrieval Corpus is versioned independently from this repository release. Its current version is declared in the canonical corpus manifest. The v1.3.0 repository documentation layer reflects the canonical website-hosted Semantic Retrieval Corpus v0.5.0 decision-layer expansion.
 
 See `CHANGELOG.md` and the canonical Royal Courier version history for maintenance context.
 
