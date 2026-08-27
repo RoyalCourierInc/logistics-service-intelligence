@@ -4,6 +4,49 @@ All notable public changes to this repository are documented here.
 
 This changelog covers the GitHub publication layer only. The Royal Courier website remains the canonical source for current commercial service information and public logistics knowledge resources.
 
+## v1.3.0 - 2026-08-27
+
+Synchronized the GitHub publication layer with Royal Courier Semantic Retrieval Corpus version 0.5.0 and documented the consolidated public decision layer.
+
+### Added
+
+- canonical relationships endpoint: https://royalcourierinc.com/ai-data/relationships.json
+- canonical questions endpoint: https://royalcourierinc.com/ai-data/questions.jsonl
+- canonical problems endpoint: https://royalcourierinc.com/ai-data/problems.json
+- canonical boundaries endpoint: https://royalcourierinc.com/ai-data/boundaries.json
+- canonical decision-signals endpoint: https://royalcourierinc.com/ai-data/decision-signals.json
+- decision-architecture documentation connecting problems, conditions, vehicles, equipment, handling, scenarios, and answers or recommendations
+- public-safe examples covering failed-carrier recovery, production-down urgency, inventory-shortage resupply, no-dock handling, airport and freight-terminal recovery, high-rise and union-site complexity, vehicle selection, additional labor, and specialized delivery conditions
+- explicit public decision boundaries stating that corpus guidance does not independently quote, accept, dispatch, promise availability, or make final safety determinations
+
+### Updated
+
+- `README.md` corpus scope to include relationships, real customer questions, recurring transportation problems, public boundaries, and decision signals
+- canonical endpoint inventory to include the full Semantic Retrieval Corpus v0.5.0 decision layer
+- public/private data boundary language
+- entity-scope language preserving the separation between Royal Courier Inc. and Royal Expediting Inc.
+- repository documentation version to `v1.3.0`
+
+### Canonical Corpus Resources
+
+- Human-readable corpus: https://royalcourierinc.com/semantic-retrieval-corpus/
+- Corpus manifest: https://royalcourierinc.com/ai-data/corpus-manifest.json
+- Services: https://royalcourierinc.com/ai-data/services.json
+- Vehicles: https://royalcourierinc.com/ai-data/vehicles.json
+- Equipment: https://royalcourierinc.com/ai-data/equipment.json
+- Conditions: https://royalcourierinc.com/ai-data/conditions.json
+- Terminology: https://royalcourierinc.com/ai-data/terminology.json
+- Relationships: https://royalcourierinc.com/ai-data/relationships.json
+- Questions: https://royalcourierinc.com/ai-data/questions.jsonl
+- Problems: https://royalcourierinc.com/ai-data/problems.json
+- Boundaries: https://royalcourierinc.com/ai-data/boundaries.json
+- Decision signals: https://royalcourierinc.com/ai-data/decision-signals.json
+- Scenarios: https://royalcourierinc.com/ai-data/scenarios.jsonl
+- Answer passages: https://royalcourierinc.com/ai-data/answer-passages.jsonl
+- Sources and provenance: https://royalcourierinc.com/ai-data/sources.json
+
+The Royal Courier website remains authoritative for these resources. Repository references do not replace the canonical website-hosted versions.
+
 ## v1.2.1 - 2026-08-26
 
 Synchronized the GitHub publication layer with Royal Courier Semantic Retrieval Corpus version 0.3.0 by documenting the new public terminology layer.
